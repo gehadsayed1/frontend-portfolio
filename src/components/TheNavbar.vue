@@ -59,7 +59,7 @@ const isActive = (section: string) => activeSection.value === section
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
         <!-- Logo -->
-        <div class="flex items-center gap-2 text-xl font-bold bg-gradient-to-r from-lavender-600 to-lavender-400 bg-clip-text text-transparent">
+        <div class="flex items-center gap-2 text-xl font-bold bg-gradient-to-r from-lavender-600 to-lavender-400 bg-clip-text text-transparent pb-2">
           <Sparkles :size="24" class="text-lavender-500" />
           <span>Jihed</span>
         </div>
@@ -218,7 +218,7 @@ const isActive = (section: string) => activeSection.value === section
   <!-- Mobile Top Bar (Minimal) -->
   <div class="md:hidden fixed top-0 left-0 right-0 z-40 bg-white/80 dark:bg-dark-bg/80 backdrop-blur-md border-b border-gray-200 dark:border-dark-border transition-theme">
     <div class="flex justify-between items-center h-14 px-4">
-      <div class="flex items-center gap-2 text-lg font-bold bg-gradient-to-r from-lavender-600 to-lavender-400 bg-clip-text text-transparent">
+      <div class="flex items-center gap-2 text-lg font-bold bg-gradient-to-r from-lavender-600 to-lavender-400 bg-clip-text text-transparent pb-2">
         <Sparkles :size="20" class="text-lavender-500" />
         <span>Jihed</span>
       </div>

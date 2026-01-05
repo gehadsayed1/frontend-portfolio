@@ -85,7 +85,7 @@ onMounted(() => {
       <div class="contact-title-wrapper text-center mb-16">
         <h2 
           ref="titleRef" 
-          class="contact-title text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-lavender-600 to-lavender-400 bg-clip-text text-transparent inline-block"
+          class="contact-title text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-lavender-600 to-lavender-400 bg-clip-text text-transparent inline-block pb-2"
         >
           {{ t('contact.title') }}
         </h2>

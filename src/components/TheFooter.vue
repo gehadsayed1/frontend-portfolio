@@ -7,7 +7,7 @@ import { PERSONAL_INFO } from '@/data/constants'
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div class="flex flex-col md:flex-row items-center justify-between gap-6">
         <div class="text-center md:text-left">
-          <h3 class="text-2xl font-bold bg-gradient-to-r from-lavender-600 to-lavender-400 bg-clip-text text-transparent mb-2">
+          <h3 class="text-2xl font-bold bg-gradient-to-r from-lavender-600 to-lavender-400 bg-clip-text text-transparent mb-2 pb-2">
             {{ PERSONAL_INFO.name }}
           </h3>
           <p class="text-gray-600 dark:text-gray-400 text-sm max-w-sm">

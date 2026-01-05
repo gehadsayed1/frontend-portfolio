@@ -81,7 +81,7 @@ onMounted(() => {
         <div class="about-content text-center md:text-left">
           <h2 
             ref="titleRef" 
-            class="about-title text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-lavender-600 to-lavender-400 bg-clip-text text-transparent inline-block"
+            class="about-title text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-lavender-600 to-lavender-400 bg-clip-text text-transparent inline-block pb-2"
           >
             {{ t('about.title') }}
           </h2>

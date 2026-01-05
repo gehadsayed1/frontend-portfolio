@@ -175,7 +175,7 @@ onUnmounted(() => {
       <div class="projects-title-wrapper text-center">
         <h2 
           ref="titleRef" 
-          class="projects-title text-4xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-lavender-600 to-lavender-400 bg-clip-text text-transparent inline-block"
+          class="projects-title text-4xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-lavender-600 to-lavender-400 bg-clip-text text-transparent inline-block pb-2"
         >
           {{ t('projects.title') }}
         </h2>

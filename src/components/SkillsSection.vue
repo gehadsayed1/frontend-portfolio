@@ -53,7 +53,7 @@ onMounted(() => {
       <div class="skills-title-wrapper text-center mb-16">
         <h2 
           ref="titleRef" 
-          class="skills-title text-4xl md:text-5xl font-bold bg-gradient-to-r from-lavender-600 to-lavender-400 bg-clip-text text-transparent inline-block"
+          class="skills-title text-4xl md:text-5xl font-bold bg-gradient-to-r from-lavender-600 to-lavender-400 bg-clip-text text-transparent inline-block pb-2"
         >
           {{ t('skills.title') }}
         </h2>

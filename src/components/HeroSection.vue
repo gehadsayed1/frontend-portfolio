@@ -191,7 +191,7 @@ const scrollToSection = (id: string) => {
         <!-- Role -->
         <h2
           ref="roleRef"
-          class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 bg-gradient-to-r from-lavender-600 to-lavender-400 bg-clip-text text-transparent"
+          class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 bg-gradient-to-r from-lavender-600 to-lavender-400 bg-clip-text text-transparent pb-2"
         >
           {{ t("hero.role") }}
         </h2>
