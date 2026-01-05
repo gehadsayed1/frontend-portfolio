@@ -205,7 +205,10 @@ const scrollToSection = (id: string) => {
         </p>
 
         <!-- CTA Button with Magnetic Hover -->
-        <div ref="ctaRef" class="inline-block">
+        <div
+          ref="ctaRef"
+          class="flex flex-col sm:flex-row items-center justify-center gap-4"
+        >
           <button
             @click="scrollToSection('projects')"
             class="group relative inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-lavender-600 to-lavender-500 hover:from-lavender-700 hover:to-lavender-600 text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-lg shadow-lavender-500/30 hover:shadow-lavender-500/50"

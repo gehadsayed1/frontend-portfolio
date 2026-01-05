@@ -40,6 +40,11 @@
 
 body {
   @apply bg-white dark:bg-dark-bg text-gray-900 dark:text-gray-100 transition-colors duration-500;
+  font-family: 'Outfit', sans-serif;
+}
+
+:lang(ar) {
+  font-family: 'Cairo', sans-serif;
 }
 
 /* Mobile bottom navigation spacing */
