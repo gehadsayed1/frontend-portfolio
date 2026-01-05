@@ -1,0 +1,40 @@
+{
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "role": "Frontend Developer & Designer",
+    "tagline": "I develop innovative user interfaces that combine attractive design with advanced functionality.",
+    "cta": "View My Work"
+  },
+  "about": {
+    "title": "A little about myself",
+    "description": "I am Jihad, a responsive front-end developer. I graduated from a college of commerce. I started in the field of front-end development two years ago for the love of the field and studied it through an online course in the city of Zagazig. I completed an online course from the YouTube platforms and enjoyed the skills and designed many websites with UI & UX in mind. I also study a UI course & UX and constantly develop my skills.",
+    "subtitle": "Responsive designs, UI/UX focus, and continuous learning"
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "frameworks": "Frameworks & Libraries",
+    "tooling": "Tooling & Architecture",
+    "styling": "Styling & UI",
+    "features": "Advanced Features"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "viewCode": "View Code",
+    "techStack": "Tech Stack",
+    "features": "Key Features",
+    "scale": "Scale"
+  },
+  "contact": {
+    "title": "Let's Work Together",
+    "description": "Contact me at any time. I will always be at your service to provide what you need, whatever it is, in the fastest time and with high quality.",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  }
+}

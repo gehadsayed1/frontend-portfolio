@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Lavender Color Palette */
+  --color-lavender-50: #faf7fd;
+  --color-lavender-100: #f3ebfe;
+  --color-lavender-200: #e9d8fd;
+  --color-lavender-300: #d6bcfa;
+  --color-lavender-400: #b794f6;
+  --color-lavender-500: #9f7aea;
+  --color-lavender-600: #805ad5;
+  --color-lavender-700: #6b46c1;
+  --color-lavender-800: #553c9a;
+  --color-lavender-900: #44337a;
+
+  /* Neutral Colors */
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+
+  /* Dark Mode Colors */
+  --color-dark-bg: #0f0a1e;
+  --color-dark-surface: #1a1433;
+  --color-dark-border: #2d2548;
+}
+
+/* Base Styles */
+* {
+  @apply border-gray-200 dark:border-dark-border;
+}
+
+body {
+  @apply bg-white dark:bg-dark-bg text-gray-900 dark:text-gray-100 transition-colors duration-500;
+}
+
+/* Mobile bottom navigation spacing */
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 4rem;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-dark-surface;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-lavender-400 dark:bg-lavender-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-lavender-500 dark:bg-lavender-500;
+}
+
+/* Smooth Transitions */
+.transition-theme {
+  @apply transition-colors duration-500;
+}
+
+/* Support for animated shadows and glows */
+* {
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Floating Code Particles */
+.code-particle {
+  position: absolute;
+  font-family: 'Courier New', monospace;
+  font-weight: 600;
+  color: #9f78e9;
+  /* filter: blur(0.3px); */
+  user-select: none;
+  will-change: transform;
+  pointer-events: none;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .code-particle {
+    display: none;
+  }
+}
