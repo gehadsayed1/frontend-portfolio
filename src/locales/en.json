@@ -13,8 +13,8 @@
   },
   "about": {
     "title": "A little about myself",
-    "description": "I am Jihad, a responsive front-end developer. I graduated from a college of commerce. I started in the field of front-end development two years ago for the love of the field and studied it through an online course in the city of Zagazig. I completed an online course from the YouTube platforms and enjoyed the skills and designed many websites with UI & UX in mind. I also study a UI course & UX and constantly develop my skills.",
-    "subtitle": "Responsive designs, UI/UX focus, and continuous learning"
+  "description": "I am a detail-oriented Front-End Developer focused on building responsive and user-centered web interfaces. I work on creating clean, scalable UI with strong attention to usability, performance, and modern design standards across different devices.\n\nI have experience working within team environments, collaborating effectively with designers, developers, and stakeholders to deliver consistent and high-quality results. I communicate clearly, adapt quickly, and contribute positively to team workflows and project goals.\n\nIn parallel, I continuously develop my skills in UI and UX to better understand user behavior and design systems, helping me bridge the gap between design and development. I enjoy turning ideas into well-structured, interactive web experiences while following best practices and clean code principles.\n\nI am always focused on learning, improving my workflow, and staying aligned with modern front-end technologies and industry standards.",
+  "subtitle": "Responsive designs, UI/UX focus, and continuous learning"
   },
   "skills": {
     "title": "Technical Skills",

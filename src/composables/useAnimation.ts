@@ -5,10 +5,15 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger)
 
-// Configure GSAP
+// Configure GSAP for Lenis integration
 gsap.config({
   force3D: true,
   nullTargetWarn: false
+})
+
+// Configure ScrollTrigger for smooth scrolling
+ScrollTrigger.config({
+  autoRefreshEvents: 'visibilitychange,DOMContentLoaded,load'
 })
 
 export interface AnimationOptions {
@@ -284,17 +289,22 @@ export function useAnimation() {
     element.style.position = 'relative'
     element.appendChild(underline)
 
-    // Animate on scroll
-    gsap.to(underline, {
-      width: '100%', // Exact width of the text
-      duration: 1.2,
-      ease: 'power2.out',
-      scrollTrigger: {
-        trigger: element,
-        start: 'top 85%',
-        toggleActions: 'play none none none'
+    // Animate on scroll - from left to right
+    gsap.fromTo(underline, 
+      {
+        width: '0%' // Start from left
+      },
+      {
+        width: '100%', // Animate to full width (left to right)
+        duration: 1.2,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: element,
+          start: 'top 85%',
+          toggleActions: 'play none none none'
+        }
       }
-    })
+    )
   }
 
   /**

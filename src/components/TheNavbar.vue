@@ -4,18 +4,20 @@ import { Moon, Sun, Globe, User, Code, Briefcase, Mail, Sparkles } from 'lucide-
 import { useTheme } from '@/composables/useTheme'
 import { useLanguage } from '@/i18n'
 import { useI18n } from 'vue-i18n'
+import { useLenis } from '@/composables/useLenis'
 
 const { theme, toggleTheme } = useTheme()
 const { toggleLanguage, locale } = useLanguage()
 const { t } = useI18n()
+const { scrollTo } = useLenis()
 
 const activeSection = ref('hero')
 
 const scrollToSection = (id: string) => {
-  const element = document.getElementById(id)
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth' })
-  }
+  scrollTo(`#${id}`, {
+    offset: -80, // Offset for fixed navbar height
+    duration: 1.2
+  })
 }
 
 // Scroll spy to detect active section
