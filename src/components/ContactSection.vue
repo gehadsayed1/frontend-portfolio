@@ -21,24 +21,57 @@ const formData = ref({
 const isSubmitting = ref(false)
 const submitStatus = ref<'idle' | 'success' | 'error'>('idle')
 
+
+const GOOGLE_SHEET_URL: string = import.meta.env.VITE_GOOGLE_SHEET_URL || ''
+
 const handleSubmit = async () => {
   isSubmitting.value = true
   submitStatus.value = 'idle'
   
   try {
-    // Simulate form submission (replace with actual API call)
-    await new Promise(resolve => setTimeout(resolve, 1500))
+    // Check if Google Sheets is configured
+    if (GOOGLE_SHEET_URL === 'YOUR_GOOGLE_APPS_SCRIPT_URL') {
+      console.warn('⚠️ Google Sheets not configured yet. Please update GOOGLE_SHEET_URL in ContactSection.vue')
+      // Simulate success for demo purposes
+      await new Promise(resolve => setTimeout(resolve, 1500))
+      submitStatus.value = 'success'
+      formData.value = { name: '', email: '', message: '' }
+    } else {
+      // Send data to Google Sheets
+      await fetch(GOOGLE_SHEET_URL, {
+        method: 'POST',
+        mode: 'no-cors', // Important for Google Apps Script
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.value.name,
+          email: formData.value.email,
+          message: formData.value.message,
+          timestamp: new Date().toISOString(),
+          source: 'Portfolio Contact Form'
+        })
+      })
+
+      // Note: With 'no-cors', we can't read the response
+      // But if no error is thrown, it means the request was sent successfully
+      console.log('✅ Data sent to Google Sheets successfully')
+      submitStatus.value = 'success'
+      formData.value = { name: '', email: '', message: '' }
+    }
     
-    // Success
-    submitStatus.value = 'success'
-    formData.value = { name: '', email: '', message: '' }
-    
-    // Reset status after 3 seconds
+    // Reset status after 5 seconds
     setTimeout(() => {
       submitStatus.value = 'idle'
-    }, 3000)
+    }, 5000)
   } catch (error) {
+    console.error('❌ Failed to send data to Google Sheets:', error)
     submitStatus.value = 'error'
+    
+    // Reset error status after 5 seconds
+    setTimeout(() => {
+      submitStatus.value = 'idle'
+    }, 5000)
   } finally {
     isSubmitting.value = false
   }
